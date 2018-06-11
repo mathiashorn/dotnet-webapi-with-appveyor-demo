@@ -1,0 +1,17 @@
+# AppVeyor Configuration
+
+platform: Any CPU
+
+configuration:
+- Release
+
+before_build:
+- nuget restore
+
+build:
+  project: DotNet.WebApi.AppVeyor.Demo.sln
+  publish_wap: true
+
+deploy:
+  provider: Environment
+  name: AppDemo Production
