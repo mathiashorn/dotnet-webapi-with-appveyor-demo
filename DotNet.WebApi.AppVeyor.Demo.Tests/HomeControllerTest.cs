@@ -24,6 +24,11 @@ namespace DotNet.WebApi.AppVeyor.Demo.Tests
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(result.StatusCode, HttpStatusCode.OK);
+
+            Assert.IsNotNull(result);
+
+            // Failed test
+            Assert.AreEqual(1, 2);
         }
     }
 }
