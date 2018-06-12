@@ -15,3 +15,14 @@ build:
 deploy:
   provider: Environment
   name: AppDemo Production
+
+notifications:
+  - provider: Email
+    to:
+      - '{{commitAuthorEmail}}'
+      - mathias.horn@universo.univates.br
+    subject: 'Build {{status}}'                  # optional
+    message: "{{template_variable_1}}, {{template_variable_2}}, ..."    # optional
+    on_build_success: true|false
+    on_build_failure: true|false
+    on_build_status_changed: true|false
