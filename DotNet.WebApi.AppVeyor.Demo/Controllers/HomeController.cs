@@ -13,8 +13,6 @@ namespace DotNet.WebApi.AppVeyor.Demo.Controllers
         {
             Message message = new Message();
 
-            xxxx
-            
             message.Title = "Hey Jude";
             message.Content = "don't be afraid";
 
